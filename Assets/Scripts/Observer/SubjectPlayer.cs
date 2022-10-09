@@ -4,21 +4,24 @@ using UnityEngine;
 public class SubjectPlayer : MonoBehaviour
 {
     public static SubjectPlayer instance;
-    public List <ObserverInterface> list;
-    private void Awake()
+    public List<IObserver> observers;
+
+    void Awake()
     {
-        instance=this;
-        list = new List<ObserverInterface>();
+        instance = this;
+        observers = new List<IObserver>();
     }
-    public void AddObeserver(ObserverInterface obs)
+
+    public void AddObserver(IObserver observer)
     {
-        list.Add(obs);
+        observers.Add(observer);
     }
-    public void NotifyObservers()
+
+    public void NotifyObserver()
     {
-        foreach (ObserverInterface obs in list)
+        foreach(IObserver observer in observers)
         {
-            obs.NotifyObserver();
+            observer.NotifyObserver();
         }
     }
 }

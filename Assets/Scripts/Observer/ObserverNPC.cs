@@ -1,15 +1,14 @@
 using UnityEngine;
 
-//public class ObserverNPC : MonoBehaviour,ObserverInterface
-//{ 
+public class ObserverNPC : MonoBehaviour, IObserver
+{
+    void Start()
+    {
+        SubjectPlayer.instance.AddObserver(this);
+    }
 
-//    public void Start()
-//    {
-//        SubjectPlayer.instance.AddObeserver(this);
-//    }
-//    public void NotifyObeserver()
-//    {
-//        Debug.Log("Avisado:" + gameObject.name);
-//    }
-
-//}
+    public void NotifyObserver()
+    {
+        Debug.Log("Avisando: " + gameObject.name);
+    }
+}
