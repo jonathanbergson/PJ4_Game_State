@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -289,6 +289,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a70c4bb68c5ca9c46baa6dba7abf6c24, type: 3}
   m_PrefabInstance: {fileID: 1958488965}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &258810096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258810091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8baa25e2ac61f4bbc4a108ea35f3cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  energy: 5
+  speed: 5
+  life: 0
+--- !u!195 &258810097
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258810091}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.9999999
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &694089672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d673743697f70c40b8b4b1142b4b20a, type: 3}
@@ -428,8 +466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 258810093}
-  energy: 5
+  energy: 2
   speed: 3
+  life: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,8 +702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 258810093}
-  energy: 5
+  energy: 4
   speed: 3
+  life: 3
 --- !u!1001 &881450906
 PrefabInstance:
   m_ObjectHideFlags: 0

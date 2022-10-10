@@ -26,6 +26,6 @@ public class SleepStateFSM : StateFSM
 
     public void Exit() 
     {
-        player.energy = 3;
+        player.energy =+ 3;
     }
 }
